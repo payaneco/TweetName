@@ -31,17 +31,17 @@ Twitterの名前欄に出典を明記できないので、こちらで出典を�
     + `-tenki-`を天気予報の記述に置換する仕組みである
     + 天気予報の記述が不満な人はgetName関数を好きなように書き換える
       https://www.webpagefx.com/tools/emoji-cheat-sheet/
-1. ネットにつながったPCで下記の処理を実行する
-    $ cd 解凍済みフォルダ
-    $ python weather.py | TweetName
-    ※Windowsの場合は`TweetName.exe`に変更
+1. ネットにつながったPCで下記の処理を実行する 
+    $ cd 解凍済みフォルダ  
+    $ python weather.py | TweetName 
+     ※Windowsの場合は`TweetName.exe`に変更
 1. Twitterで名前を確認する
     + あとはcronやタスクスケジューラ仕込むなどご自由に。
 
 ### 開発経緯
 1. [Twitterの名前を5分毎に東京の天気☼☂☃と連動させるサーバレスプログラムを書いたら色々知らないことが出てきた話](https://qiita.com/issei_y/items/ab641746be2704db98be)を読む
 2. 週末の天気が一目でわかると便利そうだと思いつく
-2. フリーのAPIだと5日しか取れなかったり精度が悪かったりという結果を見たので、気象庁のデータを使用する
+2. フリーのAPIだと5日しか取れない仕様や、精度が悪めという記事を見たので、気象庁のデータを使用する
 3. AWSでサーバレスするお金を掛けたくないので、前から持ってたConoHaサーバで適当なコードを書く
 4. サーバ環境のせいで、慣れないpython2.7の文字コードに苦戦する
 5. サーバにtweepy入れようとして失敗したので、実績のある[Go言語](https://github.com/payaneco/GutenJapAlice)でツイートするよう妥協する
